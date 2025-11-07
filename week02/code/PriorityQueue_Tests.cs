@@ -6,9 +6,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 public class PriorityQueueTests
 {
     [TestMethod]
-    // Scenario: 
-    // Expected Result: 
-    // Defect(s) Found: 
+    // Scenario: Add multiple items with different priorities and remove them
+    // Expected Result: Items removed in order of highest priority first, FIFO if same priority
+   // Defect(s) Found: Currently Dequeue does not always remove the highest priority first.
     public void TestPriorityQueue_1()
     {
         var priorityQueue = new PriorityQueue();
@@ -16,9 +16,9 @@ public class PriorityQueueTests
     }
 
     [TestMethod]
-    // Scenario: 
-    // Expected Result: 
-    // Defect(s) Found: 
+    // Scenario: Add items with same priority and remove them
+    // Expected Result: First item enqueued with that priority is removed first (FIFO)
+    // Defect(s) Found: Items with same priority are not dequeued in the correct order.
     public void TestPriorityQueue_2()
     {
         var priorityQueue = new PriorityQueue();
