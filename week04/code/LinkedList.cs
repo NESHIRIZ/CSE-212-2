@@ -209,7 +209,6 @@ public class LinkedList : IEnumerable<int>
         curr = curr.Prev;
     }
         // TODO Problem 5
-        yield return 0; // replace this line with the correct yield return statement(s)
     }
 
     public override string ToString()
